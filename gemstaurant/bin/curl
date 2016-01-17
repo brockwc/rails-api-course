@@ -27,4 +27,8 @@ curl -v -X POST \
 
 }
 
+stats() {
+  curl http://localhost:3000/stats
+}
+
 $1

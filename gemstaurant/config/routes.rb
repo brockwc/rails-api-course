@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'stats', to: "stats#index"
+
   resources :orders, only: [ :index ] #/orders
 
   resources :tables, except: [:new, :edit] do
