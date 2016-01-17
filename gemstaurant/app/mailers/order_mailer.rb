@@ -5,9 +5,9 @@ class OrderMailer < ApplicationMailer
   #
   #   en.order_mailer.send_receipt.subject
   #
-  def send_receipt
-    @greeting = "Hi"
-
-    mail to: "to@example.org"
+  def send_receipt order
+    @order = order
+    binding.pry
+    mail to: @order.email, subject: "Receipt for order #{order.id}"
   end
 end
